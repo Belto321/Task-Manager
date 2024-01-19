@@ -33,7 +33,7 @@ Task Manager is a web application designed to help you efficiently manage your t
    If you want to populate the database with sample data, run:
 
    ```bash
-   php artisan db:seed
+   php artisan db:seed --class=dbSeeder
 
 7. **Start Laravel Development Server:**
 
