@@ -6,13 +6,17 @@ import { ChangeEvent, FormEvent, useState } from "react"
 export default function NewTask(){
     const [newTask, setNewTask] = useState('')
     const router = useRouter()
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
         setNewTask(e.target.value);
       }
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (newTask.length < 2) {
           alert('Please enter at least 2 characters for the task.');
+          return;
+        }
+        if (newTask.length > 35) {
+          alert('Please enter less than 35 characters for the task.');
           return;
         }
 
@@ -22,7 +26,7 @@ export default function NewTask(){
               headers: {
                 'Content-Type': 'application/json',
               },
-              body: JSON.stringify({ name: newTask, completed: false }),
+              body: JSON.stringify({ name: newTask }),
             });
       
             if (response.ok) {
@@ -47,7 +51,7 @@ export default function NewTask(){
                 name="newTask"
                 value={newTask}
                 placeholder="Create your new task"
-                onChange={handleChange}
+                onChange={handleInputChange}
             />
             <button 
                 type="submit"

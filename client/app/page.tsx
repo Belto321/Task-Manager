@@ -6,8 +6,8 @@ export type TaskType = {
   id: string
   name: string
   completed: boolean
-  created_at: string
-  updated_at: string
+  created_at: Date
+  updated_at: Date
 }
 
 type HomeProps = {
@@ -33,16 +33,14 @@ export default async function Home({searchParams}: HomeProps) {
     }
   };
 
-  const fetchAndRenderTasks = async () => {
-    const tasks = await fetchData();
-    return <Tasks tasks={tasks} />;
-  };
+  const tasks = await fetchData();
+
 
   return (
     <div>
       <Header />
       <NewTask />
-      {fetchAndRenderTasks()}
+      <Tasks tasks={tasks} />
     </div>
   )
 }

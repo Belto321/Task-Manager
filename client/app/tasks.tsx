@@ -42,7 +42,7 @@ export default function Tasks({tasks}: Props){
     function handleSelectChange(e: React.ChangeEvent<HTMLSelectElement>) {
         const selectedValue = e.target.value;
     
-          router.push(`/?completed=${selectedValue}`);
+        router.push(`/?completed=${selectedValue}`);
     
         setFilter(selectedValue);
       }
@@ -63,7 +63,6 @@ export default function Tasks({tasks}: Props){
                 <div className="mt-3 flex justify-center items-center space-x-2" key={task.id}>
                 <input
                     type="checkbox"
-                    min={1}
                     className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                     onChange={() => handleCompleteChange(task.id)}
                     defaultChecked={task.completed}
