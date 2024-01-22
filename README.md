@@ -17,28 +17,29 @@ Task Manager is a web application designed to help you efficiently manage your t
    ```bash
    cd api
    ```
+   (Make sure you are at "Task-Manager/api")
    ```bash
    composer install
 
-3. **Create .env file:**
+4. **Create .env file:**
    Create a copy of the .env.example file and name it .env. Update the database credentials and any other necessary configurations.
 
-4. **Generate Application Key:**
+5. **Generate Application Key:**
    
    ```bash
    php artisan key:generate
 
-5. **Migrate Database:**
+6. **Migrate Database:**
    
    ```bash
    php artisan migrate
-6. **Seed Database (Optional):**
+7. **Seed Database (Optional):**
    If you want to populate the database with sample data, run:
 
    ```bash
    php artisan db:seed --class=dbSeeder
 
-7. **Start Laravel Development Server:**
+8. **Start Laravel Development Server:**
 
    ```bash
    php artisan serve
@@ -51,6 +52,8 @@ Task Manager is a web application designed to help you efficiently manage your t
 
    ```bash
    cd client
+   ```
+   (Make sure you are at "Task-Manager/client")
 
 2. **Install Dependencies:**
 
