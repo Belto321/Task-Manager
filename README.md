@@ -12,9 +12,10 @@ Task Manager is a web application designed to help you efficiently manage your t
    git clone https://github.com/your-username/task-manager.git
    cd task-manager
 
-2. **Install Dependencies:**
+2. **Navigate to the Back-end Directory and Install Dependencies:**
 
    ```bash
+   cd api
    composer install
 
 3. **Create .env file:**
