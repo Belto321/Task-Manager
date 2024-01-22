@@ -47,7 +47,7 @@ Task Manager is a web application designed to help you efficiently manage your t
 1. **Navigate to the Frontend Directory:**
 
    ```bash
-   cd frontend
+   cd client
 
 2. **Install Dependencies:**
 
