@@ -60,11 +60,7 @@ Task Manager is a web application designed to help you efficiently manage your t
    ```bash
    npm install
 
-3. **Create .env.local file:**
-
-   Create a copy of the .env.example file and name it .env.local. Update the API_URL to point to your Laravel backend (e.g., API_URL=http://localhost:8000/api).
-
-4. **Start Next.js Development Server:**
+3. **Start Next.js Development Server:**
 
    ```bash
    npm run dev
