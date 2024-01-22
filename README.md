@@ -16,6 +16,8 @@ Task Manager is a web application designed to help you efficiently manage your t
 
    ```bash
    cd api
+   ```
+   ```bash
    composer install
 
 3. **Create .env file:**
